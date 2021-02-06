@@ -1,0 +1,27 @@
+{# default layout skeleton including bricks #}
+
+{% include "bricks/header-doc" %}
+
+<body>
+
+
+	{# Google Tag Manager (noscript) #}
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKP8Q32"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	{# End Google Tag Manager (noscript) #}
+
+
+	{% include "bricks/header-content" %}
+
+    <main id="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    
+    {% include "bricks/footer-content" %}
+
+    {% include "bricks/footer-scripts" %}
+
+</body>
+</html>

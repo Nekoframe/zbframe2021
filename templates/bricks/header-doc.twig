@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+	<head>
+
+		{% include "bricks/header-meta" %}
+
+		<link rel="home" href="{{ siteUrl }}" />
+        <link rel="stylesheet" media="screen" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" media="screen" href="/css/style.css?{{globals.version}}">
+        <link  rel="stylesheet" media="screen" href="/color/default.css?{{globals.version}}">
+        <script src="/js/modernizr.custom.js?{{globals.version}}"></script>
+
+
+		{% include "bricks/header-analytics" %}
+	
+		{# fonts #}
+        {# <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> #}
+        {# <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"> #}
+		<script src="https://kit.fontawesome.com/abaf38a5c0.js" crossorigin="anonymous"></script>
+
+		{# JS #}
+		{# Google reCaptcha #}
+		{# <script type="text/javascript">
+		var onloadCallback = function() {
+			grecaptcha.render('captcha', {
+			'sitekey' : '6LdS77YUAAAAAKHP11zbTs2WaAPHDZrlv6ez00hf'
+			});
+		};
+		</script> #}
+
+		{# Site key: 6LdS77YUAAAAAKHP11zbTs2WaAPHDZrlv6ez00hf #}
+		{# Secret key: 6LdS77YUAAAAAE93GlUAO3n9kG8RwWPwbj36G2OA #}
+
+</head>
