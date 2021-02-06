@@ -1,0 +1,435 @@
+// Bootstrap 4 - Started from mobile -> desktop
+// Anything with !default can be overidden 
+
+// Fonts from typekit
+// @import url("https://use.typekit.net/fia3hpp.css");
+
+// Google fonts included
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+// Import slick-slider into styles
+// @import "node_modules/slick-carousel/slick/slick.scss";
+
+// font-family:
+$font-family-sans-serif: 'Lato', sans-serif;
+
+$brand-light:                   #fff;
+$brand-dark:                    #0F0F0D;
+$border-colour:                 #C2C2C2;
+
+// Theme colours (not used)
+$brand-primary:                 #9e007e; 
+$brand-secondary:               #97acc2; 
+$brand-tertiary:                #367885;
+
+$brand-success:                 #18771d;
+$brand-warning:                 #dfdc25;
+$brand-danger:                  #7c181d;
+
+
+
+// Brand colour
+$brand-white:                    #fff;
+$brand-black:                    #0F0F0D;
+
+
+
+$brand-grape:                   #9e007e;
+$brand-purple:                  #68478D;
+$brand-blue:                    #407ec9;
+$brand-aqua:                    #0096B6;
+$brand-green:                   #8F983E;
+$brand-mustard:                 #D29500;
+$brand-orange:                  #ea7600;
+
+$brand-grey:                    #F4F4F4;
+
+// footer stripe
+$lighten-dark:                  #22221D;
+
+// logo
+$logo-black:                    #1d1d1b;
+$logo-grape:                    #9b1a7e;
+$logo-aqua:                     #0193b1;
+$logo-green:                    #8e983d;
+$logo-mustard:                  #c89706;
+
+// $bg-tertiary-gradient:   linear-gradient(to bottom, #9FBDC0 0%, #BCD1D2 50%);
+
+// background can be set
+//$brand-background:    url('https://s3.eu-west-1.amazonaws.com/cursor-website/backgrounds/ocean-depths.jpg');
+
+// Change default colours
+$theme-colors: (
+    "primary":      $brand-primary,
+    "secondary":    $brand-secondary,
+    "tertiary":     $brand-tertiary,
+    "success":      $brand-success,
+    "warning":      $brand-warning,
+    "danger":       $brand-danger,
+    "light":        $brand-light,
+    "dark":         $brand-dark
+);
+
+// Include parts of Bootstrap
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+// Remove elements use
+$theme-colors: map-remove($theme-colors, "info");
+
+$link-hover-decoration:         none;
+$enable-rounded:                false;
+$body-color:                    $brand-dark;
+$spacer:                        16px;
+
+// Grid setup
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1400px
+);
+
+// Font sizes
+$font-size-base:                1.125rem; /*    18px */
+$line-height-base:              2rem /* 32px */;
+$h1-font-size:                  $font-size-base * 2.25; /* 36px */
+$h2-font-size:                  $font-size-base * 1.555; /* 28 px */
+$h3-font-size:                  $font-size-base * 1.225; /* 25.6px */
+$h4-font-size:                  $font-size-base * 1.112; /* 22px*/
+$h5-font-size:                  $font-size-base; /* 19px */
+$h6-font-size:                  $font-size-base;    /* 19px */
+$small-font-size:               75%;
+
+$headings-margin-bottom:        $spacer;
+$font-family-base:              $font-family-sans-serif;
+$headings-font-family:          $font-family-sans-serif;
+$headings-font-weight:          900;
+$font-weight-demi-bold:         700;
+$font-weight-bold:              500;
+$font-weight-normal:            300;
+$font-weight-thin:              100;
+$font-weight-base:              300;
+$headings-line-height:          1.4;
+//$headings-color:              null !default;
+$btn-block-spacing-y:           1rem;
+
+$quote-font-size:               $font-size-base * 1.428571428571429; /* 20 */
+
+$headings-margin-bottom:        $spacer * 1.25 ;
+$paragraph-margin-bottom:       1.25rem;
+
+$navbar-light-toggler-icon-bg:  none;
+
+
+
+$grid-gutter-width:             20px;
+$navbar-nav-link-padding-x:     1rem;
+$navbar-padding-y:              0;
+
+// Nav colours
+$navbar-light-color:            $brand-secondary;
+$navbar-light-hover-color:      $brand-light;
+$navbar-light-active-color:     $brand-secondary;
+$navbar-light-disabled-color:   rgba($brand-secondary, .5);
+$navbar-light-toggler-icon-bg:  none;
+$navbar-light-toggler-border-color: transparent;
+
+// Btn
+$btn-focus-width:        0;
+$btn-focus-box-shadow:      none;
+
+// Hr
+$hr-border-color:        $border-colour;
+
+// Tables
+$table-color:                   $brand-secondary;
+$table-bg:                      rgba($brand-light, .25);
+$table-border-color:            $brand-primary;
+$table-cell-padding:            2rem;
+
+// Pagination
+$pagination-color:              $brand-primary;
+$pagination-border-width:       4px;
+$pagination-border-color:       transparent;
+$pagination-focus-box-shadow:   none;
+$pagination-focus-outline:      0;
+$pagination-hover-color:        $brand-secondary;
+$pagination-active-border-color:transparent;
+$pagination-disabled-bg:        transparent;
+$pagination-disabled-border-color:  transparent;
+
+// Optional
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/tables";
+//@import "node_modules/bootstrap/scss/carousel";
+@import "node_modules/bootstrap/scss/pagination";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/modal";
+@import "node_modules/bootstrap/scss/print";
+// @import "node_modules/bootstrap/scss/badge";
+// @import "node_modules/bootstrap/scss/code";
+
+.light { color: $brand-light; }
+.dark { color: $brand-dark; }
+
+// Padding defaults
+.py-small{  padding-top: $spacer * 1.5; padding-bottom: $spacer * 1.5; }
+.py-medium { padding-top: $spacer * 2; padding-bottom: $spacer * 2; }
+.py-large { padding-top: $spacer * 3; padding-bottom: $spacer * 3; }
+
+// Margin defaults
+.my-small{ margin-top: $spacer * 1.5; margin-bottom: $spacer * 1.5; }
+.py-medium { margin-top: $spacer * 2; margin-bottom: $spacer * 2; }
+.py-large { margin-top: $spacer * 3; margin-bottom: $spacer * 3; }
+
+
+/*
+*   ====================
+*   Typography
+*   ====================
+*/
+h1, h2, h3, h4, h5, p, a, li, address, input, label, textarea {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5 { letter-spacing: -.5px; }
+
+h4, h5 { letter-spacing: -.25px; }
+
+strong { font-weight: $headings-font-weight; }
+
+p {
+    font-weight: $font-weight-normal;
+
+    &.small, small {
+        line-height: $line-height-base * 0.75;
+    }
+}
+
+a {
+    @include transition(all .5s ease);
+    font-weight: $font-weight-bold;
+}
+
+h1, .h1 {
+    // font-size: $h1-font-size * 1.39;
+    // line-height: $line-height-base * 1.75;
+
+    // @include media-breakpoint-down(md) {
+    //     font-size: $h2-font-size;
+    //     line-height: $line-height-base * 1.2;
+    // }
+
+    // @include media-breakpoint-down(sm) {
+    //     line-height: $line-height-base * 0.9;
+    // }
+}
+
+h2, .h2 {
+    // font-size: $h1-font-size * 1.05;
+
+    // @include media-breakpoint-down(md) {
+    //     font-size: $h3-font-size * 1.1;
+    // }
+}
+
+
+
+// List styles
+
+ul, ol {
+    &.list-styled { 
+        list-style: none;
+        li{
+            position: relative;
+            margin-bottom: $spacer;
+        }
+    }
+}
+
+ol {
+    &.list-styled {
+        counter-reset: item;
+        li {
+            counter-increment: item;
+            &:before {
+                content: counter(item);
+                text-align: center;
+                display: block;
+                height: $spacer * 3;
+                width: $spacer * 3;
+                position: absolute;
+                border-radius: 100%;
+                left: - $spacer * 3;
+                top: $spacer;
+                background: $brand-light;
+                line-height: $spacer * 3;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+ul {
+    &.list-styled {
+        li{
+            &:before{
+                @extend .primary-bg;
+                content: '';
+                display: block;
+                height: $spacer;
+                width: $spacer;
+                position: absolute;
+                left: -20px;
+                top: 14px;
+            }
+        }
+    }
+}
+/*
+*   ====================
+*   Colour bg variations
+*   ====================
+*/
+
+// Main background determins colours inside
+@each $color, $value in $theme-colors {
+    .#{$color}-bg { 
+        .example { background: rgba($value,.5); }
+        .slider-thumbnails{
+            .slick-arrow {
+                &.slick-prev, &.slick-next{
+                    background: rgba($value,.75);
+                    &:before, &:after {
+                        background-color: darken($value,50%);
+                    }
+                }
+            }
+        }
+    }
+}
+$brand-colours: (
+    'white': (
+        'background': $brand-white, 'text': $brand-dark, 'text-alternative': $brand-dark, 'extra': $brand-grey
+    ),
+    'dark': (
+        'background': $brand-dark, 'text': $brand-white, 'text-alternative': $brand-dark, 'extra': $brand-grey
+    ),
+    
+);
+
+@each $colour-key, $colour-variants in $brand-colours {
+    $background-colour: map-get($colour-variants, 'background');
+    $text-colour: map-get($colour-variants, 'text');
+    $text-alternative-colour: map-get($colour-variants, 'text-alternative');
+    $extra-colour: map-get($colour-variants, 'extra');
+
+
+    .#{$colour-key}-bg {
+        background-color: $background-colour;
+
+        h1, h2, h3, h4, h5, h6 { 
+            color: $text-alternative-colour; 
+        }
+
+        p, a { color: $text-colour; }
+        a:hover, a:focus{
+            color: rgba($text-colour,.5);
+        }
+
+        &.feature {
+            h3, h4 {
+                color: $text-colour; 
+            }
+        }
+
+        .news-item {
+            .news-content {
+                background-color:  $extra-colour;
+                p, h3{
+                    color: $text-alternative-colour;
+                }
+            }
+        }
+
+        .quote-component {
+            blockquote {
+                p {
+                    color: $text-colour;
+                }
+            }
+        }
+
+        &.text-component {
+            p {
+                color: $text-alternative-colour;
+            }
+        }
+
+        .contact-page {
+            p, a {
+                color: $text-alternative-colour;
+            }
+        }
+    }
+}
+
+
+// banner
+.banner {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .banner-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-120%);
+        width: 100%;
+        color: $brand-black;
+
+        h1 {
+            margin-bottom: 0;
+        }
+
+        p {
+            font-size: $h3-font-size;
+        }
+    }
+
+    .banner-line {
+        width: 60%;
+        height: 3px;
+        margin: 0 auto;
+        background-color: $brand-black;
+    }
+
+    &.white {
+        .banner-text {
+            color: $brand-white;
+
+        }
+        
+        .banner-line {
+            background-color: $brand-white;
+        }
+    }
+}

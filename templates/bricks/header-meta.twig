@@ -11,25 +11,25 @@
 	{% if element.metaTitle != null %}
 		{% set meta_title =  element.metaTitle %}
 	{% else %}
-		{% set meta_title = element.title ~ ' | ' ~ siteName %}
+		{% set meta_title = element.title ~ ' | Zbframe' %}
 	{% endif %}
 
 	{# META DESCRIPTION #}
 	{% if element.metaDescription is defined and element.metaDescription != "" %}
 		{% set meta_description = element.metaDescription %}
-	{# {% elseif element.summary is defined and element.summary != "" %}
-		{% set meta_description = element.summary|striptags %} #}
+	{# {% elseif element.body is defined and element.body != "" %}
+		{% set meta_description = element.body %} #}
 	{% else %}
-		{# {% set meta_description = globals.siteDescription %} #}
+		{% set meta_description = '' %}
 	{% endif %}
 
 
-	{% if entry.images.one() is defined and entry.images.one() != "" %}
-		{% set image = entry.images.one().getUrl('') %}
-	{% elseif entry.banner.one() is defined and entry.banner.one() != "" %}
-		{% set image = entry.banner.one().getUrl('') %}
+	{% if element.banner is defined and element.banner|length > 0 %}
+		{% set image = element.banner.one.getUrl('') %}
 	{% else %}
-		{# {% set image = globals.defaultImage.one().getUrl('') %} #}
+		{% if globals.defaultImage is defined and globals.defaultImage|length > 0 %}
+			{% set image = globals.defaultImage.one().getUrl('') %}
+		{% endif %}
 	{% endif %}
 
 	{# HTML Meta Tags #}

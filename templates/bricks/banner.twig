@@ -1,1 +1,35 @@
-<h1>banner</h1>
+
+{# get banner image #}
+{% if entry.banner is defined and entry.banner|length > 0 %}
+    {% set banner = entry.banner.one() %}
+{% else %}
+    {% set banner = globals.defaultImage.one() %}
+{% endif %}
+
+{# get banner text colour #}
+{% if entry.bannerTextColour is defined and entry.bannerTextColour == 'white' %}
+    {% set bannerColour = 'white' %}
+{% else %}
+    {% set bannerColour = 'black' %}
+{% endif %}
+
+
+<div class="banner {{ bannerColour }}" style="background-image: url('{{ banner.getUrl('banner') }}');">
+    <div class="banner-text text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    {% if entry.bannerTitle is defined and entry.bannerTitle != '' %}
+                    <h1>{{ entry.bannerTitle }}</h1>
+                    {% endif %}
+
+                    <div class="banner-line"></div>
+
+                    {% if entry.bannerDescription is defined and entry.bannerDescription != '' %}
+                    <p>{{ entry.bannerDescription }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

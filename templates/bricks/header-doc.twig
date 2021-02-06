@@ -2,32 +2,19 @@
 <html lang="en-GB">
 	<head>
 
-		{# {% include "bricks/header-meta" %} #}
+		{% include "bricks/header-meta" %}
 
 		<link rel="home" href="{{ siteUrl }}" />
-        <link rel="stylesheet" media="screen" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" media="screen" href="/css/style.css?{{globals.version}}">
-        <link  rel="stylesheet" media="screen" href="/color/default.css?{{globals.version}}">
-        <script src="/js/modernizr.custom.js?{{globals.version}}"></script>
-
+		{% if globals.version is defined and globals.version != '' %}
+        	<link rel="stylesheet" media="screen" href="/css/styles.css?{{ globals.version }}">
+		{% else %}
+			<link rel="stylesheet" media="screen" href="/css/styles.css">
+		{% endif %}
 
 		{% include "bricks/header-analytics" %}
 	
 		{# fonts #}
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-
-		{# JS #}
-		{# Google reCaptcha #}
-		{# <script type="text/javascript">
-		var onloadCallback = function() {
-			grecaptcha.render('captcha', {
-			'sitekey' : '6LdS77YUAAAAAKHP11zbTs2WaAPHDZrlv6ez00hf'
-			});
-		};
-		</script> #}
-
-		{# Site key: 6LdS77YUAAAAAKHP11zbTs2WaAPHDZrlv6ez00hf #}
-		{# Secret key: 6LdS77YUAAAAAE93GlUAO3n9kG8RwWPwbj36G2OA #}
+		{# <link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"> #}
 
 </head>
