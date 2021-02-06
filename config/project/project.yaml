@@ -1,0 +1,17 @@
+dateModified: 1612627948
+email:
+  fromEmail: frame.thanawan@gmail.com
+  fromName: Zbframe2021
+  transportType: craft\mail\transportadapters\Sendmail
+system:
+  edition: solo
+  live: true
+  name: Zbframe2021
+  schemaVersion: 3.6.1
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true
