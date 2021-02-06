@@ -1,0 +1,18 @@
+contentColumnType: string(240)
+fieldGroup: b8e83cea-d7b0-4a31-bbf7-3f5cf758c4e1
+handle: metaTitle
+instructions: ''
+name: 'Meta title'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 60
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText
