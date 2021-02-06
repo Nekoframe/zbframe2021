@@ -1,0 +1,34 @@
+contentColumnType: string
+fieldGroup: d23e39a0-0ac2-4b8e-bb63-bdd516c460c2
+handle: bannerTextColour
+instructions: ''
+name: 'Banner text colour'
+searchable: false
+settings:
+  optgroups: true
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - White
+        -
+          - value
+          - white
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Black
+        -
+          - value
+          - black
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown
