@@ -5,16 +5,19 @@
 // @import url("https://use.typekit.net/fia3hpp.css");
 
 // Google fonts included
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap');
 
 // Import slick-slider into styles
 // @import "node_modules/slick-carousel/slick/slick.scss";
 
 // font-family:
 $font-family-sans-serif: 'Lato', sans-serif;
+$font-family-montserrat: 'Montserrat', sans-serif;
 
 $brand-light:                   #fff;
 $brand-dark:                    #0F0F0D;
+
 $border-colour:                 #C2C2C2;
 
 // Theme colours (not used)
@@ -30,7 +33,13 @@ $brand-danger:                  #7c181d;
 
 // Brand colour
 $brand-white:                    #fff;
-$brand-black:                    #0F0F0D;
+$brand-black:                    #2b2b2b;
+$brand-grey:                     #F4F4F4;
+
+
+$text-black:                     #0F0F0D;
+$text-pink:                      #e55a7d;
+
 
 
 
@@ -42,22 +51,23 @@ $brand-green:                   #8F983E;
 $brand-mustard:                 #D29500;
 $brand-orange:                  #ea7600;
 
-$brand-grey:                    #F4F4F4;
+
 
 // footer stripe
 $lighten-dark:                  #22221D;
 
 // logo
-$logo-black:                    #1d1d1b;
-$logo-grape:                    #9b1a7e;
-$logo-aqua:                     #0193b1;
-$logo-green:                    #8e983d;
-$logo-mustard:                  #c89706;
+// $logo-black:                    #1d1d1b;
+// $logo-grape:                    #9b1a7e;
+// $logo-aqua:                     #0193b1;
+// $logo-green:                    #8e983d;
+// $logo-mustard:                  #c89706;
 
-// $bg-tertiary-gradient:   linear-gradient(to bottom, #9FBDC0 0%, #BCD1D2 50%);
 
-// background can be set
-//$brand-background:    url('https://s3.eu-west-1.amazonaws.com/cursor-website/backgrounds/ocean-depths.jpg');
+// background colour
+.pink-bg {
+    background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06));
+}
 
 // Change default colours
 $theme-colors: (
@@ -81,7 +91,7 @@ $theme-colors: map-remove($theme-colors, "info");
 
 $link-hover-decoration:         none;
 $enable-rounded:                false;
-$body-color:                    $brand-dark;
+$body-color:                    $text-black;
 $spacer:                        16px;
 
 // Grid setup
@@ -93,10 +103,10 @@ $container-max-widths: (
 );
 
 // Font sizes
-$font-size-base:                1.125rem; /*    18px */
+$font-size-base:                1rem; /*    16px */
 $line-height-base:              2rem /* 32px */;
-$h1-font-size:                  $font-size-base * 2.25; /* 36px */
-$h2-font-size:                  $font-size-base * 1.555; /* 28 px */
+$h1-font-size:                  $font-size-base * 2.5; /* 40px */
+$h2-font-size:                  $font-size-base * 2.25; /* 36 px */
 $h3-font-size:                  $font-size-base * 1.225; /* 25.6px */
 $h4-font-size:                  $font-size-base * 1.112; /* 22px*/
 $h5-font-size:                  $font-size-base; /* 19px */
@@ -105,12 +115,12 @@ $small-font-size:               75%;
 
 $headings-margin-bottom:        $spacer;
 $font-family-base:              $font-family-sans-serif;
-$headings-font-family:          $font-family-sans-serif;
-$headings-font-weight:          900;
-$font-weight-demi-bold:         700;
-$font-weight-bold:              500;
-$font-weight-normal:            300;
-$font-weight-thin:              100;
+$headings-font-family:          $font-family-montserrat;
+$headings-font-weight:          700;
+// $font-weight-demi-bold:         700;
+$font-weight-bold:              700;
+// $font-weight-normal:            400;
+$font-weight-thin:              300;
 $font-weight-base:              300;
 $headings-line-height:          1.4;
 //$headings-color:              null !default;
@@ -224,6 +234,11 @@ p {
 a {
     @include transition(all .5s ease);
     font-weight: $font-weight-bold;
+    color: $text-pink;
+
+    &:hover, &:focus {
+        color: rgba($text-pink, 0.5);
+    }
 }
 
 h1, .h1 {
@@ -344,7 +359,7 @@ $brand-colours: (
         background-color: $background-colour;
 
         h1, h2, h3, h4, h5, h6 { 
-            color: $text-alternative-colour; 
+            color: $text-colour; 
         }
 
         p, a { color: $text-colour; }
@@ -352,28 +367,28 @@ $brand-colours: (
             color: rgba($text-colour,.5);
         }
 
-        &.feature {
-            h3, h4 {
-                color: $text-colour; 
-            }
-        }
+        // &.feature {
+        //     h3, h4 {
+        //         color: $text-colour; 
+        //     }
+        // }
 
-        .news-item {
-            .news-content {
-                background-color:  $extra-colour;
-                p, h3{
-                    color: $text-alternative-colour;
-                }
-            }
-        }
+        // .news-item {
+        //     .news-content {
+        //         background-color:  $extra-colour;
+        //         p, h3{
+        //             color: $text-alternative-colour;
+        //         }
+        //     }
+        // }
 
-        .quote-component {
-            blockquote {
-                p {
-                    color: $text-colour;
-                }
-            }
-        }
+        // .quote-component {
+        //     blockquote {
+        //         p {
+        //             color: $text-colour;
+        //         }
+        //     }
+        // }
 
         &.text-component {
             p {
@@ -404,7 +419,7 @@ $brand-colours: (
         top: 50%;
         transform: translate(-50%,-120%);
         width: 100%;
-        color: $brand-black;
+        color: $text-black;
 
         h1 {
             margin-bottom: 0;
@@ -419,7 +434,7 @@ $brand-colours: (
         width: 60%;
         height: 3px;
         margin: 0 auto;
-        background-color: $brand-black;
+        background-color: $text-black;
     }
 
     &.white {

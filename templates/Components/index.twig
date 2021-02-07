@@ -1,0 +1,24 @@
+{% if entry.components is defined and entry.components != '' %}
+	{# Matrix Content Components #}
+	{% for block in entry.components.all() %}
+
+		{# Text  #}
+		{% if block.type == "text" %}
+			{% include "components/text" with { 'loopIndex' : loop.index } %}
+
+        {# ImagetText #}
+		{% elseif block.type == "imageText" %}
+			{% include "components/imageText" with { 'loopIndex' : loop.index } %}
+
+		{# Column #}
+		{# {% elseif block.type == "column" %}
+			{% include "components/column" with { 'loopIndex' : loop.index } %} #}
+
+		{# Spacer #}
+		{# {% elseif block.type == "spacer" %}
+			{% include "components/spacer" with { 'loopIndex' : loop.index } %} #}
+
+		{% endif %}
+
+	{% endfor %}
+{% endif %}

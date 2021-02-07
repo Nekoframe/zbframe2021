@@ -1,0 +1,52 @@
+{# text component #}
+
+{# get background colour #}
+{% if block.background is defined and block.background|length > 0 %}
+    {% set background = block.background.one.slug %}
+{% else %}
+    {% set background = 'white' %}
+{% endif %}
+
+{# get column size #}
+{% if block.columnSize is defined and block.columnSize == 'one-third' %}
+    {% set columnOne = 'col-md-5' %}
+    {% set columnTwo = 'col-md-7' %}
+{% elseif block.columnSize is defined and block.columnSize == 'two-third' %}
+    {% set columnOne = 'col-md-7' %}
+    {% set columnTwo = 'col-md-5' %}
+{% else %}
+    {% set columnOne = 'col-md-6' %}
+    {% set columnTwo = 'col-md-6' %}
+{% endif %}
+
+<div class="{{ background }}-bg py-5">
+    <div class="container text-component">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                {% if block.heading is defined and block.heading != '' %}
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-2 text-uppercase{% if block.textAlign is defined and block.textAlign == 'center' %} text-center{% endif %}">{{ block.heading }}</h2>
+                    </div>
+                </div>
+                {% endif %}
+                <div class="row">
+                    {# if there are content on two column #}
+                    {% if block.columnOne is defined and block.columnOne != '' and block.columnTwo is defined and block.columnTwo != '' %}
+                        <div class="{{ columnOne }}">
+                            {{ block.columnOne }}
+                        </div>
+                        <div class="{{ columnTwo }}">
+                            {{ block.columnTwo }}
+                        </div>
+                    {# content only in one column #}
+                    {% else %}
+                        <div class="col-12{% if block.textAlign is defined and block.textAlign == 'center' %} text-center{% endif %}">
+                            {{ block.columnOne }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

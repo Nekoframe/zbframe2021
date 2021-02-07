@@ -1,8 +1,13 @@
-dateModified: 1612649931
+dateModified: 1612656864
 email:
   fromEmail: frame.thanawan@gmail.com
   fromName: Zbframe2021
   transportType: craft\mail\transportadapters\Sendmail
+plugins:
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
 system:
   edition: solo
   live: true

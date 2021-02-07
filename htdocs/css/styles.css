@@ -1,8 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-/*    18px */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap");
+.pink-bg {
+  background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06)); }
+
+/*    16px */
 /* 32px */
-/* 36px */
-/* 28 px */
+/* 40px */
+/* 36 px */
 /* 25.6px */
 /* 22px*/
 /* 19px */
@@ -25,7 +28,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 body {
   margin: 0;
   font-family: "Lato", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 2rem;
   color: #0F0F0D;
@@ -269,27 +272,27 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 20px;
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   line-height: 1.4; }
 
 h1, .h1 {
-  font-size: 2.53125rem; }
+  font-size: 2.5rem; }
 
 h2, .h2 {
-  font-size: 1.74937rem; }
+  font-size: 2.25rem; }
 
 h3, .h3 {
-  font-size: 1.37813rem; }
+  font-size: 1.225rem; }
 
 h4, .h4 {
-  font-size: 1.251rem; }
+  font-size: 1.112rem; }
 
 h5, .h5 {
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 
 h6, .h6 {
-  font-size: 1.125rem; }
+  font-size: 1rem; }
 
 .lead {
   font-size: 1.25rem;
@@ -324,7 +327,7 @@ hr {
 small,
 .small {
   font-size: 75%;
-  font-weight: 300; }
+  font-weight: 400; }
 
 mark,
 .mark {
@@ -2969,10 +2972,10 @@ button.bg-tertiary:focus {
   font-weight: lighter !important; }
 
 .font-weight-normal {
-  font-weight: 300 !important; }
+  font-weight: 400 !important; }
 
 .font-weight-bold {
-  font-weight: 500 !important; }
+  font-weight: 700 !important; }
 
 .font-weight-bolder {
   font-weight: bolder !important; }
@@ -4999,7 +5002,7 @@ fieldset:disabled a.btn {
       box-shadow: 0 0 0 0 rgba(54, 120, 133, 0.5); }
 
 .btn-link {
-  font-weight: 300;
+  font-weight: 400;
   color: #9e007e;
   text-decoration: none; }
   .btn-link:hover {
@@ -5703,19 +5706,22 @@ h4, h5 {
   letter-spacing: -.25px; }
 
 strong {
-  font-weight: 900; }
+  font-weight: 700; }
 
 p {
-  font-weight: 300; }
+  font-weight: 400; }
   p.small, p small {
     line-height: 1.5rem; }
 
 a {
   transition: all 0.5s ease;
-  font-weight: 500; }
+  font-weight: 700;
+  color: #e55a7d; }
   @media (prefers-reduced-motion: reduce) {
     a {
       transition: none; } }
+  a:hover, a:focus {
+    color: rgba(229, 90, 125, 0.5); }
 
 ul.list-styled, ol.list-styled {
   list-style: none; }
@@ -5827,14 +5833,6 @@ ul.list-styled li:before {
     color: #0F0F0D; }
   .white-bg a:hover, .white-bg a:focus {
     color: rgba(15, 15, 13, 0.5); }
-  .white-bg.feature h3, .white-bg.feature h4 {
-    color: #0F0F0D; }
-  .white-bg .news-item .news-content {
-    background-color: #F4F4F4; }
-    .white-bg .news-item .news-content p, .white-bg .news-item .news-content h3 {
-      color: #0F0F0D; }
-  .white-bg .quote-component blockquote p {
-    color: #0F0F0D; }
   .white-bg.text-component p {
     color: #0F0F0D; }
   .white-bg .contact-page p, .white-bg .contact-page a {
@@ -5843,19 +5841,11 @@ ul.list-styled li:before {
 .dark-bg {
   background-color: #0F0F0D; }
   .dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6 {
-    color: #0F0F0D; }
+    color: #fff; }
   .dark-bg p, .dark-bg a {
     color: #fff; }
   .dark-bg a:hover, .dark-bg a:focus {
     color: rgba(255, 255, 255, 0.5); }
-  .dark-bg.feature h3, .dark-bg.feature h4 {
-    color: #fff; }
-  .dark-bg .news-item .news-content {
-    background-color: #F4F4F4; }
-    .dark-bg .news-item .news-content p, .dark-bg .news-item .news-content h3 {
-      color: #0F0F0D; }
-  .dark-bg .quote-component blockquote p {
-    color: #fff; }
   .dark-bg.text-component p {
     color: #0F0F0D; }
   .dark-bg .contact-page p, .dark-bg .contact-page a {
@@ -5877,7 +5867,7 @@ ul.list-styled li:before {
     .banner .banner-text h1 {
       margin-bottom: 0; }
     .banner .banner-text p {
-      font-size: 1.37813rem; }
+      font-size: 1.225rem; }
   .banner .banner-line {
     width: 60%;
     height: 3px;
