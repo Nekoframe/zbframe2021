@@ -1,0 +1,40 @@
+{# quick link component #}
+
+{# get background colour #}
+{% if block.background is defined and block.background|length > 0 %}
+    {% set background = block.background.one.slug %}
+{% else %}
+    {% set background = 'white' %}
+{% endif %}
+
+<div class="{{ background }}-bg py-5">
+    <div class="container work-component">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                {% if block.heading is defined and block.heading != '' %}
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-4 text-center text-uppercase{% if block.headingTextAlign is defined and block.headingTextAlign == 'center' %} text-center{% endif %}">{{ block.heading }}</h2>
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if block.links is defined and block.links|length > 0 %}
+                    <div class="row">
+                        {% for item in block.links.all() %}
+                        <div class="col-md-3 my-2">
+                            <div class="work-item">
+                                <a href="{{ item.projectLink }}" target="_blank">
+                                    <div class="overlay"><p class="d-flex justify-content-center">{{ item.title }}</p></div>
+                                    <img class="img-fluid" src="{{ item.projectImage.one.getUrl('square') }}" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>

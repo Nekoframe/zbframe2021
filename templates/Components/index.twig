@@ -7,8 +7,8 @@
 			{% include "components/text" with { 'loopIndex' : loop.index } %}
 
         {# ImagetText #}
-		{% elseif block.type == "imageText" %}
-			{% include "components/imageText" with { 'loopIndex' : loop.index } %}
+		{% elseif block.type == "work" %}
+			{% include "components/work" with { 'loopIndex' : loop.index } %}
 
 		{# Column #}
 		{# {% elseif block.type == "column" %}

@@ -5894,3 +5894,28 @@ ul.list-styled li:before {
 
 .text-component figure img {
   width: 100%; }
+
+.work-component .work-item {
+  position: relative; }
+
+.work-component .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(43, 43, 43, 0.9);
+  opacity: 0;
+  transition: all 0.5s ease; }
+  .work-component .overlay p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.225rem;
+    text-align: center; }
+
+.work-component a:hover .overlay, .work-component a:focus .overlay {
+  opacity: 1; }

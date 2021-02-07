@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: work
+name: Work
+propagationMethod: all
+siteSettings:
+  47dca4c1-4c2f-452e-ac04-2c6e80e84aa2:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

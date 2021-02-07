@@ -462,3 +462,39 @@ $brand-colours: (
         }
     }
 }
+
+// quick link component
+.work-component {
+    .work-item {
+        position: relative;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        background-color: rgba($brand-black, 0.9);
+        opacity: 0;
+        transition: all 0.5s ease;        
+        p {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            color: $brand-white;
+            font-size: $h3-font-size;
+            text-align: center;
+        }
+    }
+
+    a {
+        &:hover, &:focus {
+            .overlay {
+                opacity: 1;
+            }
+        }
+    }
+}

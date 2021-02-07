@@ -1,4 +1,4 @@
-dateModified: 1612659574
+dateModified: 1612663685
 email:
   fromEmail: frame.thanawan@gmail.com
   fromName: Zbframe2021
@@ -12,8 +12,9 @@ system:
   edition: solo
   live: true
   name: Zbframe2021
+  retryDuration: null
   schemaVersion: 3.6.1
-  timeZone: America/Los_Angeles
+  timeZone: Europe/London
 users:
   allowPublicRegistration: false
   defaultGroup: null
