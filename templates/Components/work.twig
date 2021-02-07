@@ -14,7 +14,14 @@
                 {% if block.heading is defined and block.heading != '' %}
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="mb-4 text-center text-uppercase{% if block.headingTextAlign is defined and block.headingTextAlign == 'center' %} text-center{% endif %}">{{ block.heading }}</h2>
+                        <h2 class="mb-4 text-center text-uppercase">{{ block.heading }}</h2>
+                    </div>
+                </div>
+                {% endif %}
+                {% if block.text is defined and block.text != '' %}
+                <div class="row">
+                    <div class="col-12 text-center">
+                        {{ block.text }}
                     </div>
                 </div>
                 {% endif %}
