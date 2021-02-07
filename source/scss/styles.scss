@@ -224,7 +224,8 @@ h4, h5 { letter-spacing: -.25px; }
 strong { font-weight: $headings-font-weight; }
 
 p {
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-base;
+    margin-bottom: $spacer;
 
     &.small, small {
         line-height: $line-height-base * 0.75;
@@ -345,6 +346,9 @@ $brand-colours: (
     'dark': (
         'background': $brand-dark, 'text': $brand-white, 'text-alternative': $brand-dark, 'extra': $brand-grey
     ),
+    'grey': (
+        'background': $brand-grey, 'text': $brand-dark, 'text-alternative': $brand-dark, 'extra': $brand-grey
+    ),
     
 );
 
@@ -445,6 +449,16 @@ $brand-colours: (
         
         .banner-line {
             background-color: $brand-white;
+        }
+    }
+}
+
+// text component
+.text-component {
+    figure {
+        img {
+            // max-width: 100%;
+            width: 100%;
         }
     }
 }

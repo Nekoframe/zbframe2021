@@ -23,6 +23,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            fieldUid: ed47c84f-ba84-4614-8bbc-0998d8c43a77
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+          -
             fieldUid: 176b8b50-daa9-47f3-855f-5a9b9d439d45
             instructions: null
             label: null
@@ -212,6 +221,41 @@ fields:
     handle: textAlign
     instructions: ''
     name: 'Text align'
+    searchable: false
+    settings:
+      optgroups: true
+      options:
+        -
+          __assoc__:
+            -
+              - label
+              - Left
+            -
+              - value
+              - left
+            -
+              - default
+              - '1'
+        -
+          __assoc__:
+            -
+              - label
+              - Center
+            -
+              - value
+              - center
+            -
+              - default
+              - ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Dropdown
+  ed47c84f-ba84-4614-8bbc-0998d8c43a77:
+    contentColumnType: string
+    fieldGroup: null
+    handle: headingTextAlign
+    instructions: ''
+    name: 'Heading text align'
     searchable: false
     settings:
       optgroups: true

@@ -5709,7 +5709,8 @@ strong {
   font-weight: 700; }
 
 p {
-  font-weight: 400; }
+  font-weight: 300;
+  margin-bottom: 16px; }
   p.small, p small {
     line-height: 1.5rem; }
 
@@ -5851,6 +5852,19 @@ ul.list-styled li:before {
   .dark-bg .contact-page p, .dark-bg .contact-page a {
     color: #0F0F0D; }
 
+.grey-bg {
+  background-color: #F4F4F4; }
+  .grey-bg h1, .grey-bg h2, .grey-bg h3, .grey-bg h4, .grey-bg h5, .grey-bg h6 {
+    color: #0F0F0D; }
+  .grey-bg p, .grey-bg a {
+    color: #0F0F0D; }
+  .grey-bg a:hover, .grey-bg a:focus {
+    color: rgba(15, 15, 13, 0.5); }
+  .grey-bg.text-component p {
+    color: #0F0F0D; }
+  .grey-bg .contact-page p, .grey-bg .contact-page a {
+    color: #0F0F0D; }
+
 .banner {
   height: 100vh;
   background-size: cover;
@@ -5877,3 +5891,6 @@ ul.list-styled li:before {
     color: #fff; }
   .banner.white .banner-line {
     background-color: #fff; }
+
+.text-component figure img {
+  width: 100%; }
