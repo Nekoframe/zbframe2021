@@ -1,0 +1,10 @@
+{# get banner image #}
+{% if block.image is defined and block.image|length > 0 %}
+    {% set image = block.image.one() %}
+{% else %}
+    {% set image = globals.defaultImage.one() %}
+{% endif %}
+
+<div class="image-component">
+    <img class="img-fluid" src="{{ image.getUrl('spacer') }}" alt="{{ image }}">
+</div>

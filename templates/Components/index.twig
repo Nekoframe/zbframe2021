@@ -6,17 +6,13 @@
 		{% if block.type == "text" %}
 			{% include "components/text" with { 'loopIndex' : loop.index } %}
 
-        {# ImagetText #}
+        {# work #}
 		{% elseif block.type == "work" %}
 			{% include "components/work" with { 'loopIndex' : loop.index } %}
 
-		{# Column #}
-		{# {% elseif block.type == "column" %}
-			{% include "components/column" with { 'loopIndex' : loop.index } %} #}
-
-		{# Spacer #}
-		{# {% elseif block.type == "spacer" %}
-			{% include "components/spacer" with { 'loopIndex' : loop.index } %} #}
+		{# image #}
+		{% elseif block.type == "image" %}
+			{% include "components/image" with { 'loopIndex' : loop.index } %}
 
 		{% endif %}
 
