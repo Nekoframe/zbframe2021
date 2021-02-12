@@ -1,0 +1,41 @@
+<footer>
+<div class="container">
+    <div class="row py-5">
+        <div class="col-12">
+            <h3 class="text-center">My social networks</h3>
+            <ul class="list-unstyled list-inline social text-center mb-0">
+                {% if globals.facebook is defined and globals.facebook != '' %}
+                <li class="list-inline-item">
+                    <a class="facebook" href="{{ globals.facebook }}" target="_blank"></a>
+                </li>
+                {% endif %}
+
+                {% if globals.instagram is defined and globals.instagram != '' %}
+                <li class="list-inline-item">
+                    <a class="instagram" href="{{ globals.instagram }}" target="_blank"></a>
+                </li>
+                {% endif %}
+
+                {% if globals.linkedin is defined and globals.linkedin != '' %}
+                <li class="list-inline-item">
+                    <a class="linkedin" href="{{ globals.linkedin }}" target="_blank"></a>
+                </li>
+                {% endif %}
+
+                {% if globals.github is defined and globals.github != '' %}
+                <li class="list-inline-item">
+                    <a class="github" href="{{ globals.github }}" target="_blank"></a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="dark-bg py-4 copyright">
+    <div class="col-12">
+        <p class="text-center mb-0">Copyright © {{ "now"|date("Y") }} Nekoframe. All rights reserved.</p>
+    </div>
+</div>
+    
+</footer>

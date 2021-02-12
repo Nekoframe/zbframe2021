@@ -39,6 +39,7 @@ $brand-grey:                     #F4F4F4;
 
 $text-black:                     #0F0F0D;
 $text-pink:                      #e55a7d;
+$text-white:                     #dddddd;
 
 
 
@@ -63,11 +64,6 @@ $lighten-dark:                  #22221D;
 // $logo-green:                    #8e983d;
 // $logo-mustard:                  #c89706;
 
-
-// background colour
-.pink-bg {
-    background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06));
-}
 
 // Change default colours
 $theme-colors: (
@@ -242,32 +238,8 @@ a {
     }
 }
 
-h1, .h1 {
-    // font-size: $h1-font-size * 1.39;
-    // line-height: $line-height-base * 1.75;
-
-    // @include media-breakpoint-down(md) {
-    //     font-size: $h2-font-size;
-    //     line-height: $line-height-base * 1.2;
-    // }
-
-    // @include media-breakpoint-down(sm) {
-    //     line-height: $line-height-base * 0.9;
-    // }
-}
-
-h2, .h2 {
-    // font-size: $h1-font-size * 1.05;
-
-    // @include media-breakpoint-down(md) {
-    //     font-size: $h3-font-size * 1.1;
-    // }
-}
-
-
 
 // List styles
-
 ul, ol {
     &.list-styled { 
         list-style: none;
@@ -344,7 +316,7 @@ $brand-colours: (
         'background': $brand-white, 'text': $brand-dark, 'text-alternative': $brand-dark, 'extra': $brand-grey
     ),
     'dark': (
-        'background': $brand-dark, 'text': $brand-white, 'text-alternative': $brand-dark, 'extra': $brand-grey
+        'background': $brand-dark, 'text': $text-white, 'text-alternative': $brand-dark, 'extra': $brand-grey
     ),
     'grey': (
         'background': $brand-grey, 'text': $brand-dark, 'text-alternative': $brand-dark, 'extra': $brand-grey
@@ -406,6 +378,11 @@ $brand-colours: (
             }
         }
     }
+}
+
+// background colour
+.pink-bg {
+    background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06));
 }
 
 
@@ -498,3 +475,38 @@ $brand-colours: (
         }
     }
 }
+
+// social
+.social {
+    a {
+        width: 40px;
+        height: 40px;
+        display: block;
+        // background-color: $brand-black;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        &:hover, &:focus {
+            // color: rgba($brand-black, 0.5);
+            opacity: 0.5;
+        }
+    }
+
+    .facebook {
+        background-image: url('/assets/icons/facebook-square-brands.svg');
+    }
+
+    .instagram {
+        background-image: url('/assets/icons/instagram-square-brands.svg');
+    }
+
+    .linkedin {
+        background-image: url('/assets/icons/linkedin-brands.svg');
+    }
+
+    .github {
+        background-image: url('/assets/icons/github-square-brands.svg');
+    }    
+}
+

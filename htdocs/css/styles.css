@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap");
-.pink-bg {
-  background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06)); }
-
 /*    16px */
 /* 32px */
 /* 40px */
@@ -5842,11 +5839,11 @@ ul.list-styled li:before {
 .dark-bg {
   background-color: #0F0F0D; }
   .dark-bg h1, .dark-bg h2, .dark-bg h3, .dark-bg h4, .dark-bg h5, .dark-bg h6 {
-    color: #fff; }
+    color: #dddddd; }
   .dark-bg p, .dark-bg a {
-    color: #fff; }
+    color: #dddddd; }
   .dark-bg a:hover, .dark-bg a:focus {
-    color: rgba(255, 255, 255, 0.5); }
+    color: rgba(221, 221, 221, 0.5); }
   .dark-bg.text-component p {
     color: #0F0F0D; }
   .dark-bg .contact-page p, .dark-bg .contact-page a {
@@ -5864,6 +5861,9 @@ ul.list-styled li:before {
     color: #0F0F0D; }
   .grey-bg .contact-page p, .grey-bg .contact-page a {
     color: #0F0F0D; }
+
+.pink-bg {
+  background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06)); }
 
 .banner {
   height: 100vh;
@@ -5919,3 +5919,25 @@ ul.list-styled li:before {
 
 .work-component a:hover .overlay, .work-component a:focus .overlay {
   opacity: 1; }
+
+.social a {
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .social a:hover, .social a:focus {
+    opacity: 0.5; }
+
+.social .facebook {
+  background-image: url("/assets/icons/facebook-square-brands.svg"); }
+
+.social .instagram {
+  background-image: url("/assets/icons/instagram-square-brands.svg"); }
+
+.social .linkedin {
+  background-image: url("/assets/icons/linkedin-brands.svg"); }
+
+.social .github {
+  background-image: url("/assets/icons/github-square-brands.svg"); }
