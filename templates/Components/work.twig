@@ -29,7 +29,7 @@
                 {% if block.links is defined and block.links|length > 0 %}
                     <div class="row">
                         {% for item in block.links.all() %}
-                        <div class="col-md-3 my-2">
+                        <div class="col-md-3 col-6 my-2">
                             <div class="work-item">
                                 <a href="{{ item.projectLink }}" target="_blank">
                                     <div class="overlay"><p class="d-flex justify-content-center">{{ item.title }}</p></div>
