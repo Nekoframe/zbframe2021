@@ -1,0 +1,41 @@
+{% extends "layout/layout" %}
+
+{% block content %}
+
+    {% include "bricks/banner" %}
+
+    {% set articles = craft.entries().section('blog').orderBy('postDate desc') %}
+    {% if articles is defined and articles|length > 0 %}
+    <div class="container blog-wrapper py-5">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="row">
+                {% for article in articles.all() %}
+                <div class="col-4 blog-item py-4">
+                    <div class="card">
+                        {% if article.banner is defined and article.banner|length > 0 %}
+                            <figure>
+                                <img class="img-fluid" src="{{ article.banner.one.getUrl('thumbnail') }}" alt="{{ article.banner.one }}" />
+                            </figure>
+                        {% endif %}
+
+                        <div class="card-body blog-detail">
+                            <h3 class="mb-2">{{ article.title }}</h3>
+                            {% if article.body is defined and article.body != '' %}
+                                {{ article.body }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                    
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+	
+    {% include "components" %}
+
+{% endblock %}
+
