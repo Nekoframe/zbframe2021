@@ -5865,6 +5865,69 @@ ul.list-styled li:before {
 .pink-bg {
   background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06)); }
 
+.navbar-toggler {
+  width: 48px;
+  height: 45px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #383838;
+  padding: 0; }
+  .navbar-toggler span {
+    width: 29px;
+    height: 3px;
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    transition: background-color all .3s ease;
+    margin: 0 auto; }
+    .navbar-toggler span:before, .navbar-toggler span:after {
+      content: '';
+      display: block;
+      width: 29px;
+      height: 3px;
+      background: #fff;
+      position: absolute;
+      transition: all .3s ease; }
+    .navbar-toggler span:before {
+      top: -9px;
+      transform-origin: 50% 0; }
+    .navbar-toggler span:after {
+      top: 9px;
+      transform-origin: 50% 0; }
+  .navbar-toggler.active {
+    background-color: #454545; }
+
+.sidenav {
+  height: auto;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 55px;
+  right: 0;
+  background-color: #454545;
+  overflow-x: hidden;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: 0.5s;
+  transform: translateY(0px);
+  opacity: 0; }
+  .sidenav a {
+    display: block;
+    width: 100%;
+    padding: 8px 20px;
+    line-height: 1.4rem;
+    color: #dddddd;
+    font-weight: 300; }
+    .sidenav a:hover, .sidenav a:focus {
+      background-color: #5e5e5e; }
+  .sidenav.active {
+    transform: translateY(10px);
+    opacity: 1; }
+
 .banner {
   height: 100vh;
   background-size: cover;
@@ -5894,6 +5957,10 @@ ul.list-styled li:before {
 
 .text-component figure img {
   width: 100%; }
+
+@media (max-width: 767.98px) {
+  .text-component h2 {
+    text-align: center; } }
 
 .work-component .work-item {
   position: relative; }
