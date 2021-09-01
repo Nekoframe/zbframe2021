@@ -6,7 +6,7 @@
 
 // Google fonts included
 // @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@700&display=swap');
 
 // Import slick-slider into styles
 // @import "node_modules/slick-carousel/slick/slick.scss";
@@ -377,6 +377,10 @@ $brand-colours: (
     }
 }
 
+figure {
+    overflow: hidden;
+}
+
 // header
 .navbar-toggler {
     width: 48px;
@@ -588,5 +592,24 @@ $brand-colours: (
     .github {
         background-image: url('/assets/icons/github-square-brands.svg');
     }    
+}
+
+// blog
+.blog-item {
+    a {
+        h4, img {
+            transition: all 0.5s ease;
+        }
+
+        &:hover, &:focus {
+            h4 {
+                color: $text-black;
+            }
+
+            img {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
 }
 

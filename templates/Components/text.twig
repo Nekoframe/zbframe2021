@@ -34,15 +34,15 @@
                     {# if there are content on two column #}
                     {% if block.columnOne is defined and block.columnOne != '' and block.columnTwo is defined and block.columnTwo != '' %}
                         <div class="{{ columnOne }}">
-                            {{ block.columnOne }}
+                            {{ block.columnOne|replace('<img ', '<img class="mb-4 mx-auto d-block img-fluid" ')|raw }}
                         </div>
                         <div class="{{ columnTwo }}">
-                            {{ block.columnTwo }}
+                            {{ block.columnTwo|replace('<img ', '<img class="mb-4 mx-auto d-block img-fluid" ')|raw }}
                         </div>
                     {# content only in one column #}
                     {% else %}
                         <div class="col-12{% if block.textAlign is defined and block.textAlign == 'center' %} text-center{% endif %}">
-                            {{ block.columnOne }}
+                            {{ block.columnOne|replace('<img ', '<img class="mb-4 mx-auto d-block img-fluid" ')|raw }}
                         </div>
                     {% endif %}
                 </div>

@@ -1,4 +1,4 @@
-dateModified: 1630515195
+dateModified: 1630517766
 email:
   fromEmail: frame.thanawan@gmail.com
   fromName: Zbframe2021
@@ -8,6 +8,7 @@ meta:
     3c1a5b22-b11a-4492-aa61-2f81691f68d4: 'Nav link' # Nav link
     968fb1bf-9d09-4e4d-9f11-3e89aefee71a: Navigation # Navigation
     c51abbc0-1717-4409-af84-f3ed1d762d37: Default # Default
+    e7aa2fde-0451-46d5-ba15-17ef3a2756c6: Thumbnail # Thumbnail
     f28460a3-7d9d-412f-9f6a-97c2be0164d8: Globals # Globals
 plugins:
   redactor:
