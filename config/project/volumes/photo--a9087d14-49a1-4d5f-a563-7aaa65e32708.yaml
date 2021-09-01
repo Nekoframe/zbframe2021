@@ -35,6 +35,6 @@ settings:
   path: images/photo
 sortOrder: 2
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: /images/photo

@@ -35,6 +35,6 @@ settings:
   path: images/banner
 sortOrder: 1
 titleTranslationKeyFormat: null
-titleTranslationMethod: null
+titleTranslationMethod: site
 type: craft\volumes\Local
 url: /images/banner
