@@ -90,27 +90,6 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
-  62814c09-b7a1-4531-8a3e-14c419694048:
-    contentColumnType: string
-    fieldGroup: null
-    handle: links
-    instructions: ''
-    name: Links
-    searchable: false
-    settings:
-      allowSelfRelations: false
-      limit: ''
-      localizeRelations: false
-      selectionLabel: ''
-      showSiteMenu: true
-      source: null
-      sources: '*'
-      targetSiteId: null
-      validateRelatedElements: false
-      viewMode: null
-    translationKeyFormat: null
-    translationMethod: site
-    type: craft\fields\Entries
   7b2f6486-1ad9-40af-9a6e-14239f7b39fa:
     contentColumnType: string
     fieldGroup: null
@@ -135,6 +114,27 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Categories
+  62814c09-b7a1-4531-8a3e-14c419694048:
+    contentColumnType: string
+    fieldGroup: null
+    handle: links
+    instructions: ''
+    name: Links
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      limit: ''
+      localizeRelations: false
+      selectionLabel: ''
+      showSiteMenu: true
+      source: null
+      sources: '*'
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: null
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Entries
 handle: work
 name: Work
 sortOrder: 3

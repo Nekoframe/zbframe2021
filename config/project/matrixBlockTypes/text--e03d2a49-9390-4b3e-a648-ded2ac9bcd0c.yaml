@@ -70,34 +70,6 @@ fieldLayouts:
         name: Content
         sortOrder: 1
 fields:
-  176b8b50-daa9-47f3-855f-5a9b9d439d45:
-    contentColumnType: text
-    fieldGroup: null
-    handle: columnOne
-    instructions: ''
-    name: 'Column one'
-    searchable: false
-    settings:
-      availableTransforms: '*'
-      availableVolumes: '*'
-      cleanupHtml: true
-      columnType: text
-      configSelectionMode: choose
-      defaultTransform: ''
-      manualConfig: ''
-      purifierConfig: ''
-      purifyHtml: '1'
-      redactorConfig: ''
-      removeEmptyTags: '1'
-      removeInlineStyles: '1'
-      removeNbsp: '1'
-      showHtmlButtonForNonAdmins: ''
-      showUnpermittedFiles: false
-      showUnpermittedVolumes: false
-      uiMode: enlarged
-    translationKeyFormat: null
-    translationMethod: none
-    type: craft\redactor\Field
   3ed6e66d-1f17-49fb-aec7-44c3c71c0e7e:
     contentColumnType: string
     fieldGroup: null
@@ -144,6 +116,34 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Dropdown
+  176b8b50-daa9-47f3-855f-5a9b9d439d45:
+    contentColumnType: text
+    fieldGroup: null
+    handle: columnOne
+    instructions: ''
+    name: 'Column one'
+    searchable: false
+    settings:
+      availableTransforms: '*'
+      availableVolumes: '*'
+      cleanupHtml: true
+      columnType: text
+      configSelectionMode: choose
+      defaultTransform: ''
+      manualConfig: ''
+      purifierConfig: ''
+      purifyHtml: '1'
+      redactorConfig: ''
+      removeEmptyTags: '1'
+      removeInlineStyles: '1'
+      removeNbsp: '1'
+      showHtmlButtonForNonAdmins: ''
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      uiMode: enlarged
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\redactor\Field
   5504ab1c-b456-40ca-b0fe-6622b2dbe068:
     contentColumnType: text
     fieldGroup: null

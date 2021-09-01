@@ -18,12 +18,12 @@
     <div class="banner-text text-center">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 offset-md-4">
+                <div class="col-md-8 offset-md-2">
                     {% if entry.bannerTitle is defined and entry.bannerTitle != '' %}
                     <h1>{{ entry.bannerTitle }}</h1>
                     {% endif %}
 
-                    <div class="banner-line"></div>
+                    <div class="line-spacer {{ bannerColour }}"></div>
 
                     {% if entry.bannerDescription is defined and entry.bannerDescription != '' %}
                     <p>{{ entry.bannerDescription }}</p>

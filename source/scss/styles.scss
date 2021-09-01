@@ -343,29 +343,6 @@ $brand-colours: (
             color: rgba($text-colour,.5);
         }
 
-        // &.feature {
-        //     h3, h4 {
-        //         color: $text-colour; 
-        //     }
-        // }
-
-        // .news-item {
-        //     .news-content {
-        //         background-color:  $extra-colour;
-        //         p, h3{
-        //             color: $text-alternative-colour;
-        //         }
-        //     }
-        // }
-
-        // .quote-component {
-        //     blockquote {
-        //         p {
-        //             color: $text-colour;
-        //         }
-        //     }
-        // }
-
         &.text-component {
             p {
                 color: $text-alternative-colour;
@@ -380,9 +357,24 @@ $brand-colours: (
     }
 }
 
-// background colour
+// general styling
 .pink-bg {
     background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06));
+}
+
+.line-spacer {
+    width: 350px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: $text-black;
+
+    @include media-breakpoint-down(sm) {
+        width: 300px;
+    }
+
+    &.white {
+        background-color: $brand-white;
+    }
 }
 
 // header

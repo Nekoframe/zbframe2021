@@ -5865,6 +5865,17 @@ ul.list-styled li:before {
 .pink-bg {
   background: linear-gradient(-90deg, rgba(251, 92, 125, 0.06), rgba(166, 131, 213, 0.06)); }
 
+.line-spacer {
+  width: 350px;
+  height: 3px;
+  margin: 0 auto;
+  background-color: #0F0F0D; }
+  @media (max-width: 767.98px) {
+    .line-spacer {
+      width: 300px; } }
+  .line-spacer.white {
+    background-color: #fff; }
+
 .navbar-toggler {
   width: 48px;
   height: 45px;

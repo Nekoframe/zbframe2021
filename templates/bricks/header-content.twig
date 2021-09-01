@@ -2,11 +2,21 @@
     <span></span>
 </button>
 
-<div id="side-nav" class="sidenav">
+{% set navigation = craft.entries().section('navigation') %}
 
+{% if navigation is defined and navigation|length > 0 %}
+<div id="side-nav" class="sidenav">
     <ul class="list-unstyled mb-0">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Blog</a></li>
+    {% for item in navigation.all() %}
+        {% if item.navLink is defined and item.navLink|length > 0 %}
+            {% set link = item.navLink.one.getUrl() %}
+        {% else %}
+            {% set link = '' %}
+        {% endif %}
+        <li>
+            <a href="{{ link }}" title="Link to {{ item.title }}">{{ item.title }}</a>
+        </li>
+    {% endfor %}
     </ul>
-  
 </div>
+{% endif %}

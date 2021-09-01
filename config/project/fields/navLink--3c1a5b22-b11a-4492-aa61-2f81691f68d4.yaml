@@ -1,0 +1,23 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: d23e39a0-0ac2-4b8e-bb63-bdd516c460c2
+handle: navLink
+instructions: ''
+name: 'Nav link'
+searchable: false
+settings:
+  allowSelfRelations: false
+  limit: '1'
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: false
+  source: null
+  sources:
+    - 'section:18daa899-4879-4f06-b57e-4d08826c5f1b'
+    - singles
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Entries
