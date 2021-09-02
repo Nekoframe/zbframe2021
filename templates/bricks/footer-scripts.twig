@@ -1,5 +1,1 @@
-{% if globals.version is defined and globals.version != '' %}
-    <script src="/js/scripts.min.js?{{ globals.version }}"></script>
-{% else %}
-    <script src="/js/scripts.min.js"></script>
-{% endif %}
+{% js "/js/scripts.min.js" %}

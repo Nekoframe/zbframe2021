@@ -5,11 +5,8 @@
 		{% include "bricks/header-meta" %}
 
 		<link rel="home" href="{{ siteUrl }}" />
-		{% if globals.version is defined and globals.version != '' %}
-        	<link rel="stylesheet" media="screen" href="/css/styles.css?{{ globals.version }}">
-		{% else %}
-			<link rel="stylesheet" media="screen" href="/css/styles.css">
-		{% endif %}
+
+		{% css "/css/styles.css" %}
 
 		{% set env = getenv('ENVIRONMENT') %}
 
