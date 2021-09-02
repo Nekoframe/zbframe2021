@@ -1,4 +1,6 @@
-/.env
+.env
 /.idea
 /vendor
 .DS_Store
+htdocs/dist/
+/node_modules

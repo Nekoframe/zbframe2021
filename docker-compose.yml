@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  zbframe:
+    build:
+      args:
+        PHP_VERSION: ${PHP_VERSION}
+      context: ./dockerfiles/
+      dockerfile: dockerfile
+    restart: unless-stopped
+    expose:
+      - 80
+    environment:
+      VIRTUAL_HOST: ${VIRTUAL_HOST}
+      VIRTUAL_PORT: 80
+      HTTPS_METHOD: noredirect
+      APP_ENV: ${APP_ENV}
+    volumes:
+      - ./:/var/www/html:delegated
+    networks:
+      - cursor-network
+
+  composer:
+    image: composer:1.10.17
+    volumes:
+      - ./:/var/www/html:delegated
+    command: [ "composer","install","-d","/var/www/html" ]
+
+
+networks:
+  cursor-network:
+    external: true

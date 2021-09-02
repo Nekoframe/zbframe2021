@@ -1,0 +1,23 @@
+ARG  PHP_VERSION=7.3-apache
+FROM php:${PHP_VERSION}
+
+RUN export DEBIAN_FRONTEND=noninteractive \
+  && mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini" \
+  && apt-get update -y \
+  && apt-get upgrade -y \
+  && apt-get install  -y  mysql* libmagickwand-dev  libzip-dev zip  git libmcrypt-dev \
+  && docker-php-ext-install mysqli pdo_mysql zip\
+  && pecl install redis-5.2.2 xdebug imagick mcrypt-1.0.4 \
+  && docker-php-ext-enable redis xdebug imagick mcrypt\
+  && a2enmod rewrite \
+  && service apache2 restart
+
+COPY ${PW}/configs/apache/000-default.conf  /etc/apache2/sites-available/
+COPY ${PW}/configs/php/xdebug.ini  /usr/local/etc/php/conf.d/
+COPY ${PW}/configs/php/custom-php-config.ini /usr/local/etc/php/conf.d/
+
+#ZSH SETUP
+RUN apt-get install -y curl zsh vim
+RUN zsh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" ||true
+RUN ln -f /bin/zsh /bin/sh
+RUN sed -i "s/plugins=(.*/plugins=(git laravel)/" ~/.zshrc
